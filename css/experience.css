@@ -1,0 +1,47 @@
+/* IMMERSIVE EXPERIENCE START */
+.immersive-experience {
+  background-color: black;
+  padding: 72px 0;
+  color: white;
+  text-align: center;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-paragraph {
+  margin-bottom: 30px;
+}
+
+.video-iframes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-iframes iframe {
+  width: 80%;
+  max-width: 660px;
+  height: 350px;
+}
+
+/* IMMERSIVE EXPERIENCE END */
+/* MOBILE RESPONSIVENESS START */
+@media (max-width: 768px) {
+  .video-iframes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-iframes iframe {
+    width: 90%;
+    height: 400px;
+  }
+}

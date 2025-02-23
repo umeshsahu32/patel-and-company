@@ -1,0 +1,155 @@
+/* CONTACT US CONTAINER */
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: url("../assets/contact-us.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.form-content h3 {
+  color: #ffffff;
+  font-family: "Raleway", Sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.contact-details {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+
+.contact-heading {
+  margin-bottom: 10px;
+}
+
+.underline {
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+  width: 150px;
+  margin-left: auto;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-info a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.input-field {
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: inherit;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+  outline: 0;
+  cursor: text;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submitBtn {
+  background-color: transparent;
+  color: orange;
+  padding: 10px 15px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #fff;
+  color: #1b1b1b;
+  padding: 10px 15px;
+  border: 1px solid #1b1b1b;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-details {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .underline {
+    margin-right: auto;
+    margin-left: 0rem;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
