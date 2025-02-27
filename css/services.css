@@ -9,18 +9,28 @@
   max-width: 1200px;
   margin: auto;
   padding: 4rem 4rem;
-  text-align: center;
 }
 
 .service-heading-container h3 {
   font-size: 3rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .service-heading-container p {
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: normal;
+}
+
+.service-heading-container ul {
+  list-style: none;
+  text-align: left;
+  line-height: 30px;
+}
+
+.service-heading-container strong {
+  font-weight: bold;
 }
 /* PAGE HEADING  END */
 /* SERVICE CARDS SECTION START*/
