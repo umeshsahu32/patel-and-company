@@ -1,47 +1,147 @@
-/* IMMERSIVE EXPERIENCE START */
-.immersive-experience {
-  background-color: black;
-  padding: 72px 0;
-  color: white;
-  text-align: center;
+.container {
+  font-family: "Raleway", "lato";
+  background-color: #000;
 }
 
-.experience-container {
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+.wood-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 32rem;
+  border: none;
+}
+
+.card__side {
+  height: 32rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-heading {
-  margin-bottom: 20px;
-}
-
-.section-paragraph {
-  margin-bottom: 30px;
-}
-
-.video-iframes {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 2rem;
+}
+.card__side--front {
+  /* background: #606c88; */
+  /* background: -webkit-linear-gradient(to left, #3f4c6b, #606c88); */
+  background: linear-gradient(to left, #3f4c6b, #606c88);
 }
 
-.video-iframes iframe {
-  width: 80%;
-  max-width: 660px;
-  height: 350px;
+.card__side--back {
+  transform: rotateY(180deg);
+  /* background: #606c88; */
+  /* background: -webkit-linear-gradient(to left, #3f4c6b, #606c88); */
+  background: linear-gradient(to left, #3f4c6b, #606c88);
 }
 
-/* IMMERSIVE EXPERIENCE END */
-/* MOBILE RESPONSIVENESS START */
-@media (max-width: 768px) {
-  .video-iframes {
-    flex-direction: column;
-    align-items: center;
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+
+.card__picture img {
+  width: 300px;
+  height: 200px;
+  border-radius: 30%;
+  margin-bottom: 1rem;
+}
+
+.card__heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 85%;
+  margin-bottom: 1rem;
+  font-family: "Raleway", "lato";
+}
+
+.card__paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  width: 85%;
+  font-family: "Raleway", "lato";
+}
+
+.card__heading--solution {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+  color: #303030;
+  width: 75%;
+}
+
+.card__heading--solution small {
+  font-size: 1rem;
+  color: #303030;
+  font-weight: normal;
+  text-transform: capitalize;
+  font-family: "Roboto Condensed";
+}
+
+.card__heading_solution--list li {
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: left;
+  color: #fff;
+  width: 85%;
+  min-width: 300px;
+  margin: auto;
+  font-family: "Raleway", "lato";
+  margin-bottom: 1rem;
+}
+
+.card__heading_solution--list li b {
+  font-family: "Raleway", "lato";
+}
+
+.card h4,
+.card h4 span,
+.card h4 span small {
+  font-family: "Raleway", "lato";
+}
+
+@media (max-width: 1200px) {
+  .wood-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
   }
+}
 
-  .video-iframes iframe {
-    width: 90%;
-    height: 400px;
+@media (max-width: 740px) {
+  .wood-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
   }
 }
